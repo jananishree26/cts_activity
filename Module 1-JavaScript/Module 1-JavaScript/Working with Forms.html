@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+
+<form id="myForm">
+
+<input type="text"
+name="username"
+placeholder="Name">
+
+<br><br>
+
+<input type="email"
+name="email"
+placeholder="Email">
+
+<br><br>
+
+<select name="event">
+
+<option>Music Festival</option>
+<option>Food Carnival</option>
+
+</select>
+
+<br><br>
+
+<button type="submit">
+Register
+</button>
+
+<p id="error"></p>
+
+</form>
+
+<script>
+
+document.getElementById("myForm")
+.addEventListener("submit",
+function(event){
+
+event.preventDefault();
+
+let name =
+this.elements["username"].value;
+
+let email =
+this.elements["email"].value;
+
+if(name==="" || email===""){
+
+document.getElementById("error")
+.innerHTML =
+"All fields are required";
+
+return;
+}
+
+alert("Registration Success");
+
+});
+
+</script>
+
+</body>
+</html>     

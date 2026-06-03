@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions and Closures</title>
+</head>
+<body>
+
+<h2>Community Events</h2>
+
+<script>
+
+function addEvent(name){
+    console.log("Event Added:", name);
+}
+
+function registerUser(name){
+    console.log(name + " Registered");
+}
+
+function filterEventsByCategory(events, callback){
+    return callback(events);
+}
+
+function registrationTracker(){
+
+    let count = 0;
+
+    return function(){
+        count++;
+        return count;
+    };
+}
+
+const trackMusic = registrationTracker();
+
+console.log(trackMusic());
+console.log(trackMusic());
+
+const events = [
+    {name:"Music Festival", category:"Music"},
+    {name:"Book Fair", category:"Education"}
+];
+
+let result = filterEventsByCategory(
+events,
+data => data.filter(
+event => event.category==="Music"
+)
+);
+
+console.log(result);
+
+</script>
+
+</body>
+</html>

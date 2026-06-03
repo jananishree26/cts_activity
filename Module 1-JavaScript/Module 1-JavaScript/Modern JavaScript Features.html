@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6 Features</title>
+</head>
+<body>
+
+<script>
+
+const event = {
+
+name:"Music Festival",
+date:"10-06-2026"
+
+};
+
+const {name,date} = event;
+
+console.log(name);
+console.log(date);
+
+function displayEvent(
+eventName = "Community Event"
+){
+
+console.log(eventName);
+
+}
+
+displayEvent();
+
+const events = [
+"Music",
+"Food",
+"Sports"
+];
+
+const copiedEvents =
+[...events];
+
+console.log(copiedEvents);
+
+</script>
+
+</body>
+</html>

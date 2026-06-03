@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Validation</title>
+</head>
+<body>
+
+<h2>Available Events</h2>
+<div id="events"></div>
+
+<script>
+
+const events = [
+    {name:"Music Festival", seats:20},
+    {name:"Food Carnival", seats:0},
+    {name:"Book Fair", seats:15}
+];
+
+events.forEach(event => {
+
+    if(event.seats > 0){
+        document.getElementById("events").innerHTML +=
+        `<p>${event.name} - Seats: ${event.seats}</p>`;
+    }
+
+});
+
+function register(eventName){
+
+    try{
+
+        let selected = events.find(
+        e => e.name === eventName);
+
+        if(selected.seats <= 0){
+            throw "Registration Closed";
+        }
+
+        selected.seats--;
+        alert("Registered Successfully");
+
+    }
+    catch(error){
+        alert(error);
+    }
+}
+
+</script>
+
+</body>
+</html>

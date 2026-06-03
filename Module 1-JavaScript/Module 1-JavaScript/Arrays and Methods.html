@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods</title>
+</head>
+<body>
+
+<h2>Community Events</h2>
+
+<script>
+
+let events = [
+
+{
+name:"Music Festival",
+category:"Music"
+},
+
+{
+name:"Food Carnival",
+category:"Food"
+}
+
+];
+
+events.push({
+
+name:"Workshop on Baking",
+category:"Food"
+
+});
+
+console.log(events);
+
+let musicEvents =
+events.filter(
+event => event.category === "Music"
+);
+
+console.log(musicEvents);
+
+let displayCards =
+events.map(
+event => `Event: ${event.name}`
+);
+
+console.log(displayCards);
+
+</script>
+
+</body>
+</html>

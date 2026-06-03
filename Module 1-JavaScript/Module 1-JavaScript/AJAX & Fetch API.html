@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch API</title>
+</head>
+<body>
+
+<button onclick="register()">
+Submit Registration
+</button>
+
+<script>
+
+function register(){
+
+setTimeout(() => {
+
+fetch(
+"https://jsonplaceholder.typicode.com/posts",
+{
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+name:"Ashwanth",
+event:"Music Festival"
+
+})
+
+})
+
+.then(response => response.json())
+
+.then(data => {
+
+alert("Registration Success");
+
+console.log(data);
+
+})
+
+.catch(error => {
+
+alert("Registration Failed");
+
+});
+
+},2000);
+
+}
+
+</script>
+
+</body>
+</html>AJAX & Fetch API

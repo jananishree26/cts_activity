@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects and Prototypes</title>
+</head>
+<body>
+
+<h2>Event Object Example</h2>
+
+<script>
+
+function Event(name,seats){
+
+    this.name = name;
+    this.seats = seats;
+}
+
+Event.prototype.checkAvailability =
+function(){
+
+    if(this.seats > 0)
+        return "Seats Available";
+    else
+        return "Full";
+};
+
+const event1 =
+new Event("Music Festival",25);
+
+console.log(event1.checkAvailability());
+
+Object.entries(event1).forEach(
+([key,value]) => {
+
+console.log(key + " : " + value);
+
+});
+
+</script>
+
+</body>
+</html>
