@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Utilities</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">Responsive Display Utilities</h2>
+
+    <!-- Hidden on all screens, visible from md and above -->
+    <div class="d-none d-md-block bg-primary text-white p-3 mb-3">
+        Visible only on Medium (md) and larger screens.
+    </div>
+
+    <!-- Hidden until lg, then displayed as flex -->
+    <div class="d-none d-lg-flex bg-success text-white p-3 justify-content-center">
+        Visible only on Large (lg) screens and above.
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
